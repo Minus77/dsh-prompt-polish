@@ -66,6 +66,14 @@
 
 前提：DeepSeek Harness `>= 0.1.7`（在 `0.2.2-rc.1` 桌面版上验证），Node.js `>= 18`。插件没有构建步骤，`lib/*.js` 就是运行时代码。
 
+### 0. 直接从 GitHub 装（推荐）
+
+```sh
+dsh plugin --profile desktop add github:Minus77/dsh-prompt-polish
+```
+
+Web 版把 `desktop` 换成 `web`。仓库根有 `dsh.bundle` 清单，没有构建步骤，装完重启 Harness 即可。
+
 ### 1. 取包
 
 ```sh

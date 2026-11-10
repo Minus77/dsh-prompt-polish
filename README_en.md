@@ -66,6 +66,14 @@ The engine is ported from [linshenkx/prompt-optimizer](https://github.com/linshe
 
 Requires DeepSeek Harness `>= 0.1.7` (verified on the `0.2.2-rc.1` desktop build) and Node.js `>= 18`. There is no build step: `lib/*.js` is the runtime.
 
+### 0. Install straight from GitHub (recommended)
+
+```sh
+dsh plugin --profile desktop add github:Minus77/dsh-prompt-polish
+```
+
+Use `web` instead of `desktop` for the browser build. The repo root declares `dsh.bundle`, there is no build step, and a restart picks it up.
+
 ### 1. Get the package
 
 ```sh
