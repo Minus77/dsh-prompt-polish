@@ -1,9 +1,9 @@
 {
-  "name": "@benrong/dsh-prompt-polish",
-  "version": "0.7.2",
+  "name": "@minus77/dsh-prompt-polish",
+  "version": "0.8.0",
   "description": "Prompt polisher for DeepSeek Harness: turn a one-line draft into a precise prompt, with diff review, undo, version history and bilingual UI.",
   "type": "module",
-  "license": "MIT",
+  "license": "AGPL-3.0-or-later",
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
@@ -78,10 +78,12 @@
     "dsh-plugin",
     "prompt",
     "prompt-engineering",
-    "prompt-optimizer",
     "deepseek-harness"
   ],
   "scripts": {
     "compat": "node compat.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

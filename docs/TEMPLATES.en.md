@@ -32,7 +32,7 @@ The panel exposes **two modes**: `Prompt` (a user-prompt draft) and `Iterate` (a
 
 ## 1. What was wrong with the first ten
 
-The 0.3.x set was a 1:1 port of `linshenkx/prompt-optimizer`'s ten templates across five "optimization modes". Diagnosed problems:
+The 0.3.x release packed ten templates into five "optimization modes". Diagnosed problems:
 
 | Problem | Evidence |
 | --- | --- |
