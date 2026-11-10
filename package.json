@@ -1,0 +1,87 @@
+{
+  "name": "@benrong/dsh-prompt-polish",
+  "version": "0.7.1",
+  "description": "Prompt polisher for DeepSeek Harness: turn a one-line draft into a precise prompt, with diff review, undo, version history and bilingual UI.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./prompts": "./lib/prompts.js",
+    "./processor": "./lib/processor.js",
+    "./mustache": "./lib/mustache.js",
+    "./extraction": "./lib/extraction.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-api-session-controller"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.1.7-0",
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-client-runtime": "*",
+    "@deepseek-ai/dsh-llm": ">=0.1.7-0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-runtime": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-llm": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README_en.md",
+    "LICENSE",
+    "compat.mjs",
+    "templates.test.mjs",
+    "docs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Minus77/dsh-prompt-polish.git"
+  },
+  "homepage": "https://github.com/Minus77/dsh-prompt-polish#readme",
+  "bugs": {
+    "url": "https://github.com/Minus77/dsh-prompt-polish/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "prompt",
+    "prompt-engineering",
+    "prompt-optimizer",
+    "deepseek-harness"
+  ],
+  "scripts": {
+    "compat": "node compat.mjs"
+  }
+}
