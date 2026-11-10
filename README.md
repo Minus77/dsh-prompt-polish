@@ -74,18 +74,18 @@ cd dsh-prompt-polish
 npm pack
 ```
 
-会得到 `benrong-dsh-prompt-polish-0.7.1.tgz`（文件名随版本走）。
+会得到 `benrong-dsh-prompt-polish-*.tgz`（文件名随版本走）。
 
 ### 2. 装进 profile
 
 ```sh
-dsh plugin --profile web add ./benrong-dsh-prompt-polish-0.7.1.tgz
+dsh plugin --profile web add ./benrong-dsh-prompt-polish-*.tgz
 ```
 
 桌面版用 `--profile desktop`：
 
 ```sh
-dsh plugin --profile desktop add ./benrong-dsh-prompt-polish-0.7.1.tgz
+dsh plugin --profile desktop add ./benrong-dsh-prompt-polish-*.tgz
 ```
 
 `dsh plugin` 把参数原样转发给 profile 目录里的 pnpm，所以本地 tgz、目录、npm 包名都接受。

@@ -74,18 +74,18 @@ cd dsh-prompt-polish
 npm pack
 ```
 
-This produces `benrong-dsh-prompt-polish-0.7.1.tgz` (the name follows the version).
+This produces `benrong-dsh-prompt-polish-*.tgz` (the name follows the version).
 
 ### 2. Install it into a profile
 
 ```sh
-dsh plugin --profile web add ./benrong-dsh-prompt-polish-0.7.1.tgz
+dsh plugin --profile web add ./benrong-dsh-prompt-polish-*.tgz
 ```
 
 For the desktop build use `--profile desktop`:
 
 ```sh
-dsh plugin --profile desktop add ./benrong-dsh-prompt-polish-0.7.1.tgz
+dsh plugin --profile desktop add ./benrong-dsh-prompt-polish-*.tgz
 ```
 
 `dsh plugin` forwards everything to pnpm inside the profile directory, so local tarballs, directories and registry names all work.
