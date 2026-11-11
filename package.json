@@ -1,6 +1,6 @@
 {
   "name": "@minus77/dsh-prompt-polish",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Prompt polisher for DeepSeek Harness: turn a one-line draft into a precise prompt, with diff review, undo, version history and bilingual UI.",
   "type": "module",
   "license": "AGPL-3.0-or-later",
