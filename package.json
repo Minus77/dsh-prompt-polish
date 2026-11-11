@@ -63,7 +63,8 @@
     "LICENSE",
     "compat.mjs",
     "templates.test.mjs",
-    "docs"
+    "docs/TEMPLATES.md",
+    "docs/TEMPLATES.en.md"
   ],
   "repository": {
     "type": "git",

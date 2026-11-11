@@ -4,12 +4,14 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Minus77/dsh-prompt-polish?style=social)](https://github.com/Minus77/dsh-prompt-polish)
 [![license](https://img.shields.io/github/license/Minus77/dsh-prompt-polish)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@minus77/dsh-prompt-polish)](https://www.npmjs.com/package/@minus77/dsh-prompt-polish)
+[![dshfind](https://dshfind.com/api/badge/Minus77/dsh-prompt-polish)](https://dshfind.com/en/plugins/Minus77/dsh-prompt-polish?ref=badge)
 
 给 [DeepSeek Harness](https://www.deepseek.com/harness/) 用的提示词优化器，长在输入框旁边。
 
 多数人的输入框里躺着一句「帮我写个周报」，剩下的信息全靠模型猜。这个插件会在你按发送之前，把它改写成一份说清楚背景、交付形式和边界的提示词。入口就是输入框右下角那枚药丸，和原生 `选择模型` 同一副长相。
 
-![面板](docs/screenshots/02-panel.png)
+![面板](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/02-panel.png)
 
 ## 它做什么
 
@@ -49,13 +51,13 @@ dsh plugin --profile desktop add github:Minus77/dsh-prompt-polish
 
 结果卡顶部写着模型、耗时、字数与 token 用量。底部只剩 `跟随当前`、`发送`、`替换草稿`，没有多余的「开始优化」按钮，因为打开的时候已经优化过了。
 
-![入口与结果](docs/screenshots/01-entry.png)
+![入口与结果](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/01-entry.png)
 
 ### 替换前先看 diff
 
 点 `替换草稿` 先出对比，不是直接写入。删除的行红底，新增的行绿底，连续没改动的行折成一行说明。
 
-![逐行 diff](docs/screenshots/03-diff.png)
+![逐行 diff](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/03-diff.png)
 
 确认后写进输入框。点 `取消` 或按 `Esc` 回到结果，草稿不动。
 
@@ -63,19 +65,19 @@ dsh plugin --profile desktop add github:Minus77/dsh-prompt-polish
 
 写入之后，入口药丸会变成 `✓ 已替换` 并多出一个 `撤销`。9 秒内点它，原文原样回来。
 
-![撤销](docs/screenshots/04-undo.png)
+![撤销](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/04-undo.png)
 
 ### 迭代
 
 切到 `迭代优化`，写一句「这版还想怎么改」，点 `开始迭代`。模型拿着上一版结果做最小差分改写，新版接在版本链后面，可以逐版对比。
 
-![迭代优化](docs/screenshots/07-iterate.png)
+![迭代优化](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/07-iterate.png)
 
 ### 模板
 
 模板菜单按分类分组，每一项带一句「这模板适合什么」和「适用 / 优点」。7 套模板都在注册表里，面板只露出和输入框草稿相关的 5 套。
 
-![模板菜单](docs/screenshots/08-templates.png)
+![模板菜单](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/08-templates.png)
 
 | 模板 | 分类 | 什么时候用 |
 | --- | --- | --- |
@@ -95,17 +97,17 @@ dsh plugin --profile desktop add github:Minus77/dsh-prompt-polish
 
 授权保存之后，点头部的时钟图标进入历史。按时间倒序排列，展开能看原稿和结果，也能复制、写回、对比版本、删除。
 
-![历史](docs/screenshots/05-history.png)
+![历史](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/05-history.png)
 
 同一条链上的版本可以在对比视图里切换。下面那段「结构变化」是本地算出来的：行数增删，目标、背景、约束、格式这几类信息覆盖了多少。整个对比过程不调用模型。
 
-![版本对比](docs/screenshots/06-compare.png)
+![版本对比](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/06-compare.png)
 
 ### 深色模式
 
 颜色全部来自主题 token，深浅色自动适配，不需要单独配一套。
 
-![深色模式](docs/screenshots/09-dark.png)
+![深色模式](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/09-dark.png)
 
 ## 一些实现上的选择
 

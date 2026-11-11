@@ -4,12 +4,14 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Minus77/dsh-prompt-polish?style=social)](https://github.com/Minus77/dsh-prompt-polish)
 [![license](https://img.shields.io/github/license/Minus77/dsh-prompt-polish)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@minus77/dsh-prompt-polish)](https://www.npmjs.com/package/@minus77/dsh-prompt-polish)
+[![dshfind](https://dshfind.com/api/badge/Minus77/dsh-prompt-polish)](https://dshfind.com/en/plugins/Minus77/dsh-prompt-polish?ref=badge)
 
 A prompt polisher for [DeepSeek Harness](https://www.deepseek.com/harness/) that lives next to the composer.
 
 Most draft boxes hold one line like "write me a weekly report" and leave the model to guess the rest. This plugin rewrites that line into a prompt that states the context, the delivery format, and the boundaries, before you hit send. The entry point is the pill at the bottom right of the composer, styled the same as the native `Select model` control.
 
-![Panel](docs/screenshots/en/02-panel.png)
+![Panel](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/02-panel.png)
 
 ## What it does
 
@@ -49,13 +51,13 @@ Write a draft, click `Prompt polish` at the bottom right. The panel opens above 
 
 The result card header shows the model, elapsed time, character count, and token usage. The footer keeps three controls: `Follow current`, `Send`, `Replace draft`. No extra "start" button, because opening the panel already did the work.
 
-![Entry and result](docs/screenshots/en/01-entry.png)
+![Entry and result](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/01-entry.png)
 
 ### Look at the diff before replacing
 
 `Replace draft` shows a comparison first. Removed lines get a red background, added lines a green one, and runs of unchanged lines collapse into a single note.
 
-![Line diff](docs/screenshots/en/03-diff.png)
+![Line diff](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/03-diff.png)
 
 Confirm to write it into the composer. `Cancel` or `Esc` goes back to the result and leaves the draft alone.
 
@@ -63,19 +65,19 @@ Confirm to write it into the composer. `Cancel` or `Esc` goes back to the result
 
 After the write, the entry pill turns into `✓ Replaced` with an `Undo` button. Click it within nine seconds and the original text comes back.
 
-![Undo](docs/screenshots/en/04-undo.png)
+![Undo](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/04-undo.png)
 
 ### Iterate
 
 Switch to `Iterate`, describe what should change, and click `Start iteration`. The model rewrites the previous result as a minimal diff, and the new version is appended to the chain so you can compare versions.
 
-![Iterate](docs/screenshots/en/07-iterate.png)
+![Iterate](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/07-iterate.png)
 
 ### Templates
 
 The template menu is grouped by category, and each entry says what the template is for plus "Use when" and "Why". Seven templates live in the registry; the panel exposes the five that apply to composer drafts.
 
-![Template menu](docs/screenshots/en/08-templates.png)
+![Template menu](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/08-templates.png)
 
 | Template | Category | Use when |
 | --- | --- | --- |
@@ -95,17 +97,17 @@ The `{ }` button in the result header turns the varying parts of the result into
 
 Once saving is allowed, the clock icon opens the history. Entries are listed newest first; expand one to see the original and the result, copy either one, write one back, compare versions, or delete it.
 
-![History](docs/screenshots/en/05-history.png)
+![History](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/05-history.png)
 
 Versions in the same chain can be switched in the comparison view. The "structure changed" line below is computed locally: line additions and deletions, and how much of the goal, context, constraints, and format information each side covers. No model call happens here.
 
-![Version comparison](docs/screenshots/en/06-compare.png)
+![Version comparison](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/06-compare.png)
 
 ### Dark mode
 
 Every colour comes from theme tokens, so light and dark follow the Harness theme without a separate palette.
 
-![Dark mode](docs/screenshots/en/09-dark.png)
+![Dark mode](https://raw.githubusercontent.com/Minus77/dsh-prompt-polish/main/docs/screenshots/en/09-dark.png)
 
 ## Design notes
 
